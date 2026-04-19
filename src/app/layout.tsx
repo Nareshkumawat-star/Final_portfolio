@@ -123,9 +123,7 @@ export const metadata: Metadata = {
 };
 
 
-import { CommandPalette } from "@/components/common/CommandPalette";
-import { CustomCursor } from "@/components/common/CustomCursor";
-import { ScrollProgress } from "@/components/common/ScrollProgress";
+import { CommandPalette, CustomCursor, ScrollProgress } from "@/components/common";
 
 export default function RootLayout({
   children,

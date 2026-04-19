@@ -12,6 +12,7 @@ import { SiLeetcode } from "react-icons/si";
 import { quentine } from "@/app/fonts";
 import { selfData } from "@/constant/";
 import spaceImg from "@/assets/images/space.png";
+import { LiveMetadata } from "./LiveMetadata";
 
 const floatingParticles = [
   { x: 200, y: 80, color: "hsl(var(--primary))", duration: 7, delay: 0 },
@@ -135,7 +136,8 @@ export const Footer = () => {
               {selfData.name}
             </button>
           </p>
-          <span className="opacity-50">© 2026 Crafted for Professional Excellence</span>
+          <p className="opacity-50">© 2026 Crafted for Professional Excellence</p>
+          <LiveMetadata />
         </div>
 
       </div>

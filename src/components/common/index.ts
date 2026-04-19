@@ -20,4 +20,5 @@ export {
   CodeTerminal,
   CommandPalette,
   ScrollProgress,
+  LiveMetadata,
 };
