@@ -1,5 +1,5 @@
 import { FC, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 
 import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
@@ -70,7 +70,8 @@ export const ExperienceCard: FC<ExperienceCardProps> = ({
       {/* Content */}
       <motion.div className="flex-1">
         <Card
-          className="relative overflow-hidden backdrop-blur-xl border transition-all duration-500 shadow-xl hover:shadow-2xl group-hover:shadow-luxury-hover-glow/20"
+          className="relative overflow-hidden backdrop-blur-xl border transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary/20"
+
           style={{
             background: "hsl(var(--glass-bg))",
             borderColor: "hsl(var(--glass-border))",

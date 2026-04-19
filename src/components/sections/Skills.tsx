@@ -80,17 +80,25 @@ export const Skills = () => {
 
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-8">
+        <div className="text-center mb-16 relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-24 bg-primary/20 blur-[80px] rounded-full animate-pulse pointer-events-none" />
           <motion.h2
-            className={`${nasalization.className} text-4xl font-bold text-primary`}
+            className={`${nasalization.className} text-4xl md:text-6xl font-bold text-primary relative z-10`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
             My Skills
+            <motion.div
+              className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent mt-4 mx-auto w-48"
+              initial={{ width: 0, opacity: 0 }}
+              whileInView={{ width: 200, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            />
           </motion.h2>
         </div>
+
 
         {(skillsData as SkillsDataProps[]).map((category, index) => {
           let direction: "left" | "right";

@@ -13,29 +13,23 @@ export const ContactSocials = () => {
     {
       Icon: FaGithub,
       link: `https://github.com/${selfData.socials_username.github}`,
+      handle: selfData.socials_username.github,
       initial: -10,
     },
     {
       Icon: FaLinkedinIn,
       link: `https://www.linkedin.com/in/${selfData.socials_username.linkedin}`,
-      initial: 10,
-    },
-    {
-      Icon: PiTelegramLogo,
-      link: `https://t.me/${selfData.socials_username.telegram}`,
-      initial: -10,
-    },
-    {
-      Icon: FaTwitter,
-      link: `https://twitter.com/${selfData.socials_username.twitter}`,
+      handle: selfData.socials_username.linkedin,
       initial: 10,
     },
     {
       Icon: SiLeetcode,
-      link: `https://leetcode.com/${selfData.socials_username.leetcode}`,
+      link: `https://leetcode.com/u/${selfData.socials_username.leetcode}`,
+      handle: selfData.socials_username.leetcode,
       initial: -10,
     },
-  ];
+  ].filter(social => social.handle);
+
 
   return (
     <ul className="flex mt-12 space-x-4">

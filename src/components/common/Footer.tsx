@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { TbHeart, TbHeartFilled } from "react-icons/tb";
 import { LuGithub, LuLinkedin, LuTwitter, LuMail } from "react-icons/lu";
+import { SiLeetcode } from "react-icons/si";
+
 
 import { quentine } from "@/app/fonts";
 import { selfData } from "@/constant/";
@@ -26,20 +28,24 @@ export const Footer = () => {
     {
       icon: LuGithub,
       href: `https://github.com/${selfData.socials_username.github}`,
+      handle: selfData.socials_username.github,
       label: "GitHub",
     },
     {
       icon: LuLinkedin,
       href: `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
+      handle: selfData.socials_username.linkedin,
       label: "LinkedIn",
     },
     {
-      icon: LuTwitter,
-      href: `https://twitter.com/${selfData.socials_username.twitter}`,
-      label: "Twitter",
+      icon: SiLeetcode,
+      href: `https://leetcode.com/u/${selfData.socials_username.leetcode}`,
+      handle: selfData.socials_username.leetcode,
+      label: "LeetCode",
     },
     { icon: LuMail, href: `mailto:${selfData.email}`, label: "Email" },
-  ];
+  ].filter(link => link.label === "Email" || link.handle);
+
 
   return (
     <footer className="relative bg-background/10 backdrop-blur-md border-t border-border/50 overflow-hidden">
@@ -95,7 +101,7 @@ export const Footer = () => {
             <h3
               className={`${quentine.className} text-2xl font-semibold text-primary`}
             >
-              Aarab Nishchal
+              {selfData.name}
             </h3>
           </div>
 
@@ -105,7 +111,7 @@ export const Footer = () => {
                 key={link.label}
                 href={link.href}
                 aria-label={link.label}
-                className="w-8 h-8 flex items-center justify-center rounded-lg border border-primary/30 bg-card/50 hover:bg-primary/10 hover:text-primary text-muted-foreground transition"
+                className="w-8 h-8 flex items-center justify-center rounded-lg border border-primary/30 bg-card/50 hover:bg-primary/20 hover:text-primary text-muted-foreground transition-all duration-300 hover:scale-110 shadow-lg glow-on-hover"
               >
                 <link.icon size={16} />
               </a>
@@ -113,24 +119,25 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-4" />
+        <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent my-6" />
 
-        <div className="text-xs text-center text-muted-foreground space-y-2">
+        <div className="text-xs text-center text-muted-foreground space-y-3">
           <p className="flex items-center justify-center gap-2">
-            Made with
-            <button onClick={toggleHeart} className="text-primary" aria-label="Toggle heart">
-              {isHeartFilled ? <TbHeartFilled /> : <TbHeart />}
+            Designed & Developed with
+            <button onClick={toggleHeart} className="text-primary hover:scale-125 transition-transform duration-300" aria-label="Toggle heart">
+              {isHeartFilled ? <TbHeartFilled className="animate-pulse" /> : <TbHeart />}
             </button>
             by
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-primary/80 hover:text-primary"
+              className="font-bold text-primary hover:text-secondary transition-colors duration-300"
             >
-              Aarab Nishchal
+              {selfData.name}
             </button>
           </p>
-          <span>Licensed under MIT</span>
+          <span className="opacity-50">© 2026 Crafted for Professional Excellence</span>
         </div>
+
       </div>
 
       {floatingParticles.map((particle, i) => (

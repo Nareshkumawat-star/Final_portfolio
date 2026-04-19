@@ -1,30 +1,26 @@
 export const experienceData = [
   {
-    role: "Software Development Engineer Intern",
-    year: "Sep'24 - Present",
+    role: "Full-Stack Web Developer",
+    year: "Jan 2024 - Present",
     description: [
-      "Optimized the platforms code execution engine by analyzing backend bottlenecks in 300+ algorithmic problems; refactored C++/Java logic to reduce average runtime latency by 15%.",
-      "Architected internal automation pipelines to validate problem constraints and test cases, ensuring 99.9% uptime for the problem statement delivery API during high-traffic hackathons.",
-      "Engineered comprehensive test suites for technical assessments, achieving 100% code coverage on edge cases to eliminate false positives in candidate grading."
+      "Architecting scalable 3D web infrastructures and high-performance immersive applications for global clients.",
+      "Spearheading the integration of Three.js and WebGL into enterprise-grade portfolios, increasing user engagement by 40%.",
+      "Consulting on software design patterns and system scalability for various startups and established firms.",
     ],
-
-    company: "UnStop",
-    technologies: [
-      "Inhouse CMS",
-      "Artificial Intelligence",
-      "Code Interpretation",
-    ],
-    url: "https://www.unstop.com/",
+    company: "Freelance / Global Solutions",
+    technologies: ["React", "Three.js", "System Design", "Node.js"],
   },
   {
-    role: "Graphic Designer",
-    year: "Nov'23 - Dec'24",
+    role: "Google Arcade Cohort 2 Participant",
+    year: "July 2025 - December 2025",
     description: [
-      "Designed scrollstopping visuals for social media and event promotions, making sure even the algorithm couldn’t ignore our team’s drip.",
-      "Turned vague design briefs into crisp creative assets—because 'make it pop' is not a real instruction but I delivered anyway.",
-      "Blended creativity with speed using Illustrator, Canva, and DaVinci Resolve to bring aesthetic harmony across posters, reels, and everything in between—basically the design department’s Swiss Army knife.",
+      "Actively participating in the Google Cloud Arcade program to gain hands-on experience with GCP labs.",
+      "Developing expertise in Cloud Computing, Generative AI, and Infrastructure management.",
+      "Completing various skill badges and challenges to demonstrate technical proficiency in cloud solutions.",
     ],
-    company: "Team Negative (Team under KIIT-DU Fashion Society)",
-    technologies: ["Adobe Illustrator", "Canva", "daVinci Resolve"],
+    company: "Google Cloud",
+    technologies: ["Google Cloud Platform", "Generative AI", "DevOps"],
+    url: "https://cloud.google.com/",
   },
 ];
+

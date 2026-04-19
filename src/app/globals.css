@@ -15,166 +15,138 @@ body {
 @layer base {
   :root {
 
-    --background: 240 15% 2%;
-    --foreground: 220 8% 94%;
+    --background: 260 40% 4%;
+    --foreground: 0 0% 98%;
 
-    /* Card & Surface Colors - Deep charcoal with luxury undertones */
-    --card: 245 20% 3%;
-    --card-foreground: 220 6% 96%;
-    --popover: 242 25% 2.5%;
-    --popover-foreground: 220 5% 97%;
+    /* Card & Surface Colors - Deep Amethyst with warm undertones */
+    --card: 260 40% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 260 45% 4.5%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary Colors - Refined platinum with dark contrast */
-    --primary: 220 15% 88%;
-    --primary-foreground: 245 30% 8%;
-    --secondary: 275 60% 45%;
-    --secondary-foreground: 275 10% 95%;
+    /* Primary Colors - Vivid Sunset Orange */
+    --primary: 20 100% 60%;
+    --primary-foreground: 20 20% 5%;
+    --secondary: 340 100% 60%;
+    --secondary-foreground: 340 10% 95%;
 
-    /* Muted & Neutral Colors - Deep grays with purple undertones */
-    --muted: 240 18% 6%;
-    --muted-foreground: 220 12% 65%;
+    /* Muted & Neutral Colors - Warm Dusty Grays */
+    --muted: 260 20% 10%;
+    --muted-foreground: 260 10% 80%;
 
-    /* Accent Colors - Rich amethyst */
-    --accent: 275 70% 55%;
-    --accent-foreground: 275 15% 95%;
+    /* Accent Colors - Royal Purple for sunset vibes */
+    --accent: 270 100% 70%;
+    --accent-foreground: 270 15% 95%;
 
-    /* Destructive Colors - Deep crimson */
-    --destructive: 0 70% 45%;
-    --destructive-foreground: 0 10% 96%;
+    /* Destructive Colors */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 10% 98%;
 
-    /* Interactive Elements - Ultra-dark with subtle definition */
-    --border: 240 20% 8%;
-    --input: 242 25% 4%;
-    --ring: 275 60% 60%;
+    /* Interactive Elements */
+    --border: 20 100% 60% / 0.15;
+    --input: 260 30% 6%;
+    --ring: 20 100% 60%;
 
-    /* Chart Colors - Dark luxury palette */
-    --chart-1: 220 15% 88%;
-    --chart-2: 275 60% 45%;
-    --chart-3: 195 50% 35%;
-    --chart-4: 315 45% 40%;
-    --chart-5: 45 40% 35%;
+    /* Chart Colors - Sunset Gradient */
+    --chart-1: 20 100% 60%;
+    --chart-2: 340 100% 60%;
+    --chart-3: 270 100% 70%;
+    --chart-4: 15 100% 50%;
+    --chart-5: 45 100% 50%;
 
-    /* Sidebar Components - Deepest blacks with luxury accents */
-    --sidebar: 245 25% 1.5%;
-    --sidebar-foreground: 220 8% 88%;
-    --sidebar-primary: 220 15% 88%;
-    --sidebar-primary-foreground: 245 30% 8%;
-    --sidebar-accent: 275 70% 55%;
-    --sidebar-accent-foreground: 275 15% 95%;
-    --sidebar-border: 240 20% 6%;
-    --sidebar-ring: 275 60% 60%;
+    /* Sidebar Components */
+    --sidebar: 260 50% 3%;
+    --sidebar-foreground: 260 10% 90%;
+    --sidebar-primary: 20 100% 60%;
+    --sidebar-primary-foreground: 20 20% 5%;
+    --sidebar-accent: 270 100% 70%;
+    --sidebar-accent-foreground: 270 15% 95%;
+    --sidebar-border: 260 30% 10%;
+    --sidebar-ring: 20 100% 60%;
 
-    /* Border Radius - Sharp luxury edges */
+    /* Border Radius */
     --radius: 0.75rem;
 
-    /* Ultra-Dark Shadow System - Deep, rich shadows */
-    --shadow-2xs: 0px 2px 4px 0px hsl(245 80% 1% / 0.8);
-    --shadow-xs: 0px 2px 4px 0px hsl(245 80% 1% / 0.8);
+    /* Sunset Shadow System - Warm tinted glows */
+    --shadow-2xs: 0px 2px 4px 0px hsl(20 80% 1% / 0.8);
+    --shadow-xs: 0px 2px 4px 0px hsl(20 80% 1% / 0.8);
     --shadow-sm:
-      0px 3px 6px 0px hsl(245 70% 1% / 0.9),
-      0px 1px 3px -1px hsl(275 40% 25% / 0.2);
+      0px 3px 6px 0px hsl(20 70% 1% / 0.9),
+      0px 1px 3px -1px hsl(340 40% 25% / 0.2);
     --shadow:
-      0px 3px 6px 0px hsl(245 70% 1% / 0.9),
-      0px 1px 3px -1px hsl(275 40% 25% / 0.2);
+      0px 3px 6px 0px hsl(20 70% 1% / 0.9),
+      0px 1px 3px -1px hsl(340 40% 25% / 0.2);
     --shadow-md:
-      0px 4px 8px 0px hsl(245 70% 1% / 0.95),
-      0px 2px 4px -1px hsl(275 40% 25% / 0.25);
+      0px 4px 8px 0px hsl(20 70% 1% / 0.95),
+      0px 2px 4px -1px hsl(340 40% 25% / 0.25);
     --shadow-lg:
-      0px 6px 12px 0px hsl(245 70% 0.5% / 1),
-      0px 4px 8px -2px hsl(275 40% 25% / 0.3);
+      0px 6px 12px 0px hsl(20 70% 0.5% / 1),
+      0px 4px 8px -2px hsl(340 40% 25% / 0.3);
     --shadow-xl:
-      0px 8px 16px 0px hsl(245 80% 0.5% / 1),
-      0px 6px 12px -3px hsl(275 40% 25% / 0.35);
+      0px 8px 16px 0px hsl(20 80% 0.5% / 1),
+      0px 6px 12px -3px hsl(340 40% 25% / 0.35);
     --shadow-2xl:
-      0px 12px 24px 0px hsl(245 90% 0% / 1),
-      0px 4px 8px 0px hsl(275 50% 30% / 0.4);
+      0px 12px 24px 0px hsl(20 90% 0% / 1),
+      0px 4px 8px 0px hsl(340 50% 30% / 0.4);
 
-    /* Dark Glass Effects - Enhanced Obsidian-like surfaces */
-    --glass-bg: hsl(245 30% 3% / 0.9);
-    --glass-bg-light: hsl(245 30% 5% / 0.8);
-    --glass-border: hsl(275 40% 35% / 0.5);
-    --glass-border-hover: hsl(275 50% 45% / 0.7);
-    --glass-glow: 0px 0px 32px hsl(275 60% 45% / 0.4);
-    --glass-glow-intense: 0px 0px 48px hsl(275 70% 50% / 0.6);
+    /* Warm Glass Effects */
+    --glass-bg: hsl(260 40% 6% / 0.8);
+    --glass-bg-light: hsl(260 40% 10% / 0.7);
+    --glass-border: hsl(20 100% 60% / 0.25);
+    --glass-border-hover: hsl(20 100% 60% / 0.5);
+    --glass-glow: 0px 0px 32px hsl(20 100% 50% / 0.15);
+    --glass-glow-intense: 0px 0px 48px hsl(340 100% 60% / 0.25);
 
-    /* Enhanced Glass Backdrop */
-    --glass-backdrop: blur(16px) saturate(180%);
-    --glass-backdrop-intense: blur(24px) saturate(200%);
+    /* Sunset Glass Backdrop */
+    --glass-backdrop: blur(18px) saturate(170%);
+    --glass-backdrop-intense: blur(28px) saturate(190%);
 
-    /* Glass Shimmer Effect */
+    /* Warm Shimmer Effect */
     --glass-shimmer: linear-gradient(
       110deg,
       transparent 25%,
-      hsl(275 60% 70% / 0.1) 50%,
-      hsl(220 80% 80% / 0.15) 55%,
+      hsl(20 100% 70% / 0.1) 50%,
+      hsl(340 100% 70% / 0.15) 55%,
       transparent 75%
     );
 
-    /* Dark Luxury Gradient - Mysterious depth */
+    /* Sunset Luxury Gradient */
     --luxury-gradient: linear-gradient(
       135deg,
-      hsl(275 60% 25% / 0.15) 0%,
-      hsl(245 40% 15% / 0.08) 25%,
-      hsl(220 30% 20% / 0.06) 50%,
-      hsl(300 45% 20% / 0.12) 75%,
-      hsl(275 60% 25% / 0.18) 100%
+      hsl(20 100% 30% / 0.15) 0%,
+      hsl(260 40% 15% / 0.08) 25%,
+      hsl(340 100% 25% / 0.1) 50%,
+      hsl(270 100% 20% / 0.12) 75%,
+      hsl(20 100% 30% / 0.18) 100%
     );
 
-    /* Enhanced Dark Hover States */
-    --hover-primary: 220 20% 92%;
-    --hover-secondary: 275 65% 50%;
-    --hover-accent: 275 75% 60%;
+    /* Warm Hover States */
+    --hover-primary: 20 100% 70%;
+    --hover-secondary: 340 100% 70%;
+    --hover-accent: 270 100% 85%;
 
-    /* Dark Premium Typography Effects */
-    --text-glow: 0px 0px 16px hsl(275 60% 60% / 0.5);
+    /* Fire Glow Typography */
+    --text-glow: 0px 0px 16px hsl(20 100% 60% / 0.4);
     --text-shadow-luxury:
-      0px 2px 6px hsl(245 100% 0% / 1), 0px 0px 12px hsl(275 40% 35% / 0.3);
+      0px 2px 4px hsl(260 100% 2% / 1), 0px 0px 10px hsl(20 100% 60% / 0.25);
 
-    /* Enhanced Dark Spacing */
-    --tracking-normal: 0.05rem;
-    --spacing: 0.25rem;
-
-    /* Additional Dark Premium Variables */
+    /* Additional Theme Variables */
     --shimmer: linear-gradient(
       90deg,
       transparent 0%,
-      hsl(275 60% 45% / 0.15) 50%,
+      hsl(20 100% 60% / 0.15) 50%,
       transparent 100%
     );
 
-    --premium-border: 1px solid hsl(275 30% 25% / 0.3);
-    --luxury-hover-glow: 0px 0px 20px hsl(275 60% 45% / 0.4);
+    --premium-border: 1px solid hsl(20 100% 50% / 0.2);
+    --luxury-hover-glow: 0px 0px 24px hsl(340 100% 50% / 0.3);
 
-    /* Dark Status Colors - Muted but visible */
-    --success: 145 40% 35%;
-    --success-foreground: 145 10% 92%;
-    --warning: 35 50% 40%;
-    --warning-foreground: 35 8% 94%;
-    --info: 200 45% 40%;
-    --info-foreground: 200 8% 94%;
+    /* Focus States */
+    --focus-ring: 2px solid hsl(20 100% 60%);
+    --focus-glow: 0px 0px 0px 4px hsl(20 100% 50% / 0.2);
 
-    /* Ultra-Dark Variants for Maximum Contrast */
-    --void: 245 30% 0.5%;
-    --abyss: 240 40% 1%;
-    --obsidian: 245 25% 2%;
 
-    /* Luxury Metal Accents */
-    --platinum: 220 15% 88%;
-    --silver: 220 10% 75%;
-    --gunmetal: 240 15% 15%;
 
-    /* Neon Accent for High Contrast Elements */
-    --neon-purple: 275 100% 70%;
-    --neon-glow: 0px 0px 20px hsl(275 100% 70% / 0.6);
-
-    /* Dark Mode Specific Enhancements */
-    --card-hover: 245 22% 4%;
-    --button-ghost: transparent;
-    --button-ghost-hover: hsl(275 30% 20% / 0.1);
-
-    /* Deep Focus States */
-    --focus-ring: 2px solid hsl(275 60% 55%);
-    --focus-glow: 0px 0px 0px 4px hsl(275 60% 45% / 0.2);
   }
 
   body {

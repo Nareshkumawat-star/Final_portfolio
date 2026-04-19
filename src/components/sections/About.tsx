@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { nasalization } from "@/app/fonts";
 import { selfData } from "@/constant";
@@ -82,22 +82,25 @@ export const About = () => {
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.4,
-                ease: "easeOut",
-              }}
-            >
-              <h2
-                className={`${nasalization.className} text-4xl md:text-5xl font-bold relative`}
+            <div className="relative mb-8">
+              <div className="absolute -left-10 top-1/2 -translate-y-1/2 w-48 h-20 bg-primary/20 blur-[60px] rounded-full animate-pulse pointer-events-none" />
+              <motion.h2
+                className={`${nasalization.className} text-4xl md:text-6xl font-bold relative z-10`}
                 style={{ color: "hsl(var(--primary))" }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
               >
                 About Me
-              </h2>
-            </motion.div>
+                <motion.div 
+                  className="h-1 bg-gradient-to-r from-primary to-transparent mt-4 w-32"
+                  initial={{ width: 0, opacity: 0 }}
+                  whileInView={{ width: 128, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                />
+              </motion.h2>
+            </div>
+
 
             <motion.div
               className="space-y-6 leading-relaxed"

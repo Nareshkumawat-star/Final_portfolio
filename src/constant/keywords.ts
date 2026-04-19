@@ -1,98 +1,87 @@
 const names = [
-  "Aarab Nishchal",
-  "Aarab Nishchal Portfolio",
-  "Aarabii",
-  "Aarab Nishchal KIIT",
-  "Aarab Nishchal Bhubaneswar",
+  "Naresh Kumawat",
+  "Naresh Kumawat Portfolio",
+  "Naresh Architect",
+  "Naresh Kumawat Jaipur",
+  "Naresh Kumawat Rajasthan",
 ];
 
 const roles = [
-  "Software Engineer",
+  "Software Architect",
+  "3D Web Developer",
   "Full Stack Developer",
   "Next.js Developer",
   "Frontend Engineer",
-  "Backend Developer",
-  "Generative AI Engineer",
-  "Technical Content Engineer",
-  "Problem Setter",
-  "Student Developer",
+  "Creative Technologist",
+  "System Designer",
+  "WebGL Expert",
+  "Software Engineer",
   "Creative Developer",
-  "UI/UX Engineer"
+  "UI/UX Architect"
 ];
 
 const skills = [
   // Web Frameworks & Libraries
   "Next.js 15",
   "React.js",
-  "React Server Components",
+  "Three.js",
+  "WebGL",
+  "React Three Fiber",
   "TypeScript",
   "Tailwind CSS",
   "Framer Motion",
   "Node.js",
   "Express.js",
-  "Redux Toolkit",
-  "Zustand",
 
   // Database & Backend
   "PostgreSQL",
   "Supabase",
   "MongoDB",
   "Prisma ORM",
-  "GraphQL",
-  "REST API",
-  "Serverless Functions",
-  "Edge Runtime",
+  "System Architecture",
+  "Microservices",
+  "API Design",
 
-  // AI & Systems
-  "Machine Learning",
-  "LLM Integration",
-  "Ollama",
-  "RAG Pipelines",
-  "LangChain",
-  "Vector Databases",
-  "C++ Optimization",
-  "Python Automation",
+  // Infrastructure & Tools
+  "Google Cloud Platform",
+  "DevOps",
   "Docker",
   "Kubernetes",
   "CI/CD Pipelines",
-  "Git & GitHub"
+  "Git & GitHub",
+  "Performance Engineering"
 ];
 
 const projects = [
-  "CppTestGenAI",
-  "Orphia Music Generator",
-  "Algo Visualizer Next.js",
-  "Bhagavad Gita API",
-  "Sorting Algorithm Visualizer",
-  "Portfolio Website Next.js",
-  "AI Powered Application"
+  "Nexus Architect Portfolio",
+  "3D Immersive Web Experiences",
+  "Enterprise Software Solutions",
+  "Scalable Web Foundations",
+  "Google Arcade Projects",
+  "Architecture Design Patterns"
 ];
 
 const locations = [
   "India",
-  "Delhi",
-  "NCR",
-  "Delhi NCR",
-  "Gurgaon",
-  "Bhubaneswar",
-  "Odisha",
+  "Jaipur",
+  "Rajasthan",
   "Bangalore",
+  "Pune",
+  "Hyderabad",
   "Remote",
   "Worldwide"
 ];
 
 const longTail = [
-  "Hire Next.js Developer in India",
-  "Best Full Stack Developer Portfolio",
-  "React Developer for startup",
-  "Software Engineer Intern opportunities",
-  "Next.js 15 Portfolio Template",
-  "Generative AI Projects Showcase",
-  "Frontend Developer with AI skills",
-  "Freelance Web Developer India",
-  "Collaborate on Open Source",
-  "Technical Writer and Developer",
-  "Hackathon Winner Portfolio"
+  "Hire Software Architect in India",
+  "Best 3D Web Developer Portfolio",
+  "Expert Next.js Architect for Hire",
+  "Immersive 3D Portfolio Developer",
+  "High Performance Web Engineering",
+  "Scaled Software Solutions Architect",
+  "Creative Technologist for Startups",
+  "Freelance Software Architect India",
+  "Expert WebGL and Three.js Solutions"
 ];
 
 export const Keywords = [
@@ -108,3 +97,4 @@ export const Keywords = [
   ...skills.map((skill) => `${skill} Expert`),
   ...skills.map((skill) => `Hire ${skill} Developer`),
 ];
+

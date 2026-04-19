@@ -79,6 +79,7 @@ export const Background = () => {
         colors={["#000000", "#8b5cf6", "#ffffff", "#1e1b4b", "#4c1d95"]}
         speed={0.3}
       />
+
       {/* Optimized: Removed second MeshGradient layer for performance.
           The first layer provides the core visual. */}
     </div>

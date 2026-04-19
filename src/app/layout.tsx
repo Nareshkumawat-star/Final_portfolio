@@ -15,28 +15,28 @@ import {
 } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  applicationName: "Aarab Nishchal",
-  title: "Aarab Nishchal | Full Stack Developer & AI Engineer",
+  applicationName: "Naresh Kumawat",
+  title: "Naresh Kumawat | Software Developer & Full-Stack Engineer",
   description:
-    "Aarab Nishchal is a student developer passionate about building modern web apps with Next.js, React, and open-source tools. Explore his projects, experiments, and developer portfolio.",
+    "Naresh Kumawat is a Software Developer specializing in building high-performance web experiences and scalable full-stack applications.",
   authors: [
     {
-      name: "Aarab Nishchal",
-      url: "https://aarab.vercel.app",
+      name: "Naresh Kumawat",
+      url: "https://nareshkumawat.vercel.app",
     },
   ],
-  creator: "Aarab Nishchal",
+  creator: "Naresh Kumawat",
   referrer: "origin-when-cross-origin",
   category: "Portfolio",
   classification: "Software Development",
   keywords: Keywords,
-  metadataBase: new URL("https://aarab.vercel.app"),
+  metadataBase: new URL("https://nareshkumawat.vercel.app"),
 
 
   alternates: {
-    canonical: "https://aarab.vercel.app",
+    canonical: "https://nareshkumawat.vercel.app",
     languages: {
-      "en-US": "https://aarab.vercel.app",
+      "en-US": "https://nareshkumawat.vercel.app",
     },
   },
   robots: {
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   verification: {
     google: "1c8e801d4931baa4",
   },
-  appleWebApp: {
+   appleWebApp: {
     capable: true,
-    title: "Aarab Nishchal",
+    title: "Naresh Kumawat",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
@@ -92,17 +92,17 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 
   openGraph: {
-    title: "Aarab Nishchal",
+    title: "Naresh Kumawat",
     description:
-      "Explore Aarab Nishchal’s portfolio featuring projects in React, Next.js, AI, and developer tools. Discover a world of creative web applications and open-source experiments.",
-    url: "https://aarab.vercel.app",
-    siteName: "Aarab Nishchal",
+      "Explore Naresh Kumawat’s portfolio featuring high-performance full-stack web experiences and modern web applications.",
+    url: "https://nareshkumawat.vercel.app",
+    siteName: "Naresh Kumawat",
     images: [
       {
         url: "/images/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "Aarab Nishchal Portfolio Thumbnail",
+        alt: "Naresh Kumawat Portfolio Thumbnail",
       },
     ],
     locale: "en_US",
@@ -112,14 +112,20 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Aarab Nishchal",
+    title: "Naresh Kumawat",
     description:
-      "Check out Aarab Nishchal’s personal portfolio and dev projects using Next.js, React, Tailwind, and modern web tech.",
+      "Check out Naresh Kumawat’s personal portfolio featuring full-stack development and creative coding.",
     images: ["/images/thumbnail.png"],
-    creator: "@aarab_ii",
-    site: "@aarab_ii",
+    creator: "@naresh_k",
+    site: "@naresh_k",
   },
+
 };
+
+
+import { CommandPalette } from "@/components/common/CommandPalette";
+import { CustomCursor } from "@/components/common/CustomCursor";
+import { ScrollProgress } from "@/components/common/ScrollProgress";
 
 export default function RootLayout({
   children,
@@ -133,9 +139,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${mono.variable} ${nasalization.variable} ${quentine.variable} font-sans`}
+        className={`${inter.variable} ${mono.variable} ${nasalization.variable} ${quentine.variable} font-sans overflow-x-hidden`}
         suppressHydrationWarning
       >
+
+
+        <ScrollProgress />
+        <CustomCursor />
+        <CommandPalette />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -161,3 +173,4 @@ export default function RootLayout({
     </html>
   );
 }
+

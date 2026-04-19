@@ -23,23 +23,17 @@ import {
 
 import {
   SiExpress,
-  SiFirebase,
-  SiFramer,
   SiMongodb,
-  SiMysql,
-  SiNetlify,
   SiNextdotjs,
   SiPostman,
-  SiReplit,
   SiTailwindcss,
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
 
-import { GiBrain } from "react-icons/gi";
+import { GiBrain, GiLogicGateNxor } from "react-icons/gi";
 import { MdApi } from "react-icons/md";
 import { TbBrandCpp } from "react-icons/tb";
-import { GrOracle } from "react-icons/gr";
 
 interface LogoProps {
   title: string;
@@ -64,8 +58,6 @@ export const skillsData: SkillsDataProps[] = [
       { title: "TypeScript", logoComponent: SiTypescript, color: "#3178C6" },
       { title: "Python", logoComponent: FaPython, color: "#3776AB" },
       { title: "MongoDB", logoComponent: SiMongodb, color: "#47A248" },
-      { title: "MySQL", logoComponent: SiMysql, color: "#4479A1" },
-      { title: "Oracle SQL", logoComponent: GrOracle, color: "#F80000" },
     ],
   },
   {
@@ -73,7 +65,6 @@ export const skillsData: SkillsDataProps[] = [
     data: [
       { title: "Bootstrap", logoComponent: FaBootstrap, color: "#7952B3" },
       { title: "Express.js", logoComponent: SiExpress, color: "#d4d4d8" },
-      { title: "Framer Motion", logoComponent: SiFramer, color: "#0055FF" },
       { title: "Next.js", logoComponent: SiNextdotjs, color: "#d4d4d8" },
       { title: "React", logoComponent: FaReact, color: "#61DAFB" },
       { title: "Tailwind CSS", logoComponent: SiTailwindcss, color: "#06B6D4" },
@@ -84,17 +75,16 @@ export const skillsData: SkillsDataProps[] = [
     data: [
       { title: "Git", logoComponent: FaGitAlt, color: "#F05032" },
       { title: "GitHub", logoComponent: FaGithub, color: "#d4d4d8" },
-      { title: "Netlify", logoComponent: SiNetlify, color: "#00C7B7" },
       { title: "Postman", logoComponent: SiPostman, color: "#FF6C37" },
-      { title: "Replit", logoComponent: SiReplit, color: "#667881" },
       { title: "Vercel", logoComponent: SiVercel, color: "#d4d4d8" },
-      { title: "Firebase", logoComponent: SiFirebase, color: "#FFCA28" },
     ],
   },
+
   {
     title: "Concepts & Technologies",
     data: [
       { title: "API Design", logoComponent: MdApi, color: "#5C2D91" },
+
       { title: "Accessibility", logoComponent: FaWheelchair, color: "#1E88E5" },
       { title: "BERT", logoComponent: FaBookOpen, color: "#2196F3" },
       { title: "CI/CD", logoComponent: FaTruckMoving, color: "#0A66C2" },
@@ -117,11 +107,9 @@ export const skillsData: SkillsDataProps[] = [
         color: "#607D8B",
       },
       { title: "Test Automation", logoComponent: FaRobot, color: "#9C27B0" },
-      {
-        title: "Version Control",
-        logoComponent: FaCodeBranch,
-        color: "#4CAF50",
-      },
+      { title: "Version Control", logoComponent: FaCodeBranch, color: "#4CAF50" },
     ],
   },
 ];
+
+

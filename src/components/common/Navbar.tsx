@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 
 import { RiMenu4Fill, RiCloseLargeFill } from "react-icons/ri";
 
+import { motion, useInView } from "motion/react";
+
 import { quentine } from "@/app/fonts";
 
 import { Button } from "../ui/button";
@@ -96,7 +98,7 @@ export const Navbar = () => {
               className="border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
             >
               {isResumePage ? (
-                <a href="/docs/Aarab_Nishchal_Resume.pdf" download="Aarab_Nishchal_Resume.pdf">
+                <a href="/docs/Naresh_Kumawat_Resume.pdf" download="Naresh_Kumawat_Resume.pdf">
                   Download Resume
                 </a>
               ) : (
@@ -141,8 +143,8 @@ export const Navbar = () => {
               >
                 {isResumePage ? (
                   <a
-                    href="/docs/Aarab_Nishchal_Resume.pdf"
-                    download="Aarab_Nishchal_Resume.pdf"
+                    href="/docs/Naresh_Kumawat_Resume.pdf"
+                    download="Naresh_Kumawat_Resume.pdf"
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center justify-center"
                   >

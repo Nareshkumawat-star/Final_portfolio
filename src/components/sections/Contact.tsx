@@ -21,22 +21,25 @@ export const Contact = () => {
       className="py-24 max-w-6xl mx-auto relative overflow-hidden"
     >
       <div className="px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center mb-16"
-        >
+        <div className="relative mb-24 text-center">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-32 bg-primary/20 blur-[120px] rounded-full animate-pulse pointer-events-none" />
           <motion.h2
-            className={`text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 relative ${nasalization.className}`}
-            initial={{ opacity: 0, scale: 0.9 }}
+            className={`text-5xl md:text-7xl lg:text-8xl font-black mb-4 relative z-10 ${nasalization.className}`}
+            initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 1, type: "spring" }}
             style={{ color: "hsl(var(--primary))" }}
           >
             Let&apos;s Connect
+            <motion.div 
+              className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent mt-8 mx-auto"
+              initial={{ width: 0, opacity: 0 }}
+              whileInView={{ width: 400, opacity: 1 }}
+              transition={{ duration: 1.5, delay: 0.5 }}
+            />
           </motion.h2>
-        </motion.div>
+        </div>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Contact Form */}

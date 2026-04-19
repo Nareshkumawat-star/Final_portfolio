@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { experienceData } from "@/constant";
 import { ExperienceCard } from "../Cards";
@@ -25,20 +25,23 @@ export function Experience() {
 
 
       <div className="container mx-auto max-w-4xl px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-24 relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-24 bg-primary/20 blur-[100px] rounded-full animate-pulse pointer-events-none" />
           <motion.h2
-            className={`${nasalization.className} text-4xl md:text-5xl font-bold text-primary`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            className={`${nasalization.className} text-4xl md:text-6xl font-bold text-primary relative z-10`}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
           >
             Experience
+            <motion.div 
+              className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent mt-6 mx-auto"
+              initial={{ width: 0, opacity: 0 }}
+              whileInView={{ width: 240, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            />
           </motion.h2>
+
           <motion.p
             className="text-xs text-muted-foreground max-w-2xl mx-auto mt-4"
             initial={{ opacity: 0, y: 20 }}
@@ -47,17 +50,18 @@ export function Experience() {
           >
             My professional journey and key experiences
           </motion.p>
-        </motion.div>
+        </div>
+
 
         <div className="relative">
           {/* Timeline line */}
           <motion.div
-            className="absolute left-6 top-0 w-px bg-gradient-to-b from-primary/50 via-secondary/30 to-transparent"
-            style={{ height: `${experienceData.length * 200}px` }}
+            className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-secondary/30 to-transparent"
             initial={{ scaleY: 0, originY: 0 }}
             animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
           />
+
 
           <div className="space-y-12">
             {experienceData.map((exp, index) => (
