@@ -53,11 +53,11 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ease-out ${isScrolled ? "pt-0 px-2 sm:px-4" : "px-2 sm:px-2"
+      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ease-out ${isScrolled ? "pt-0 px-4 sm:px-6 md:px-8" : "px-4 sm:px-6 md:px-8"
         } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div
-        className={`floating-nav rounded-2xl px-4 sm:px-6 py-3 bg-glass-bg transition-all duration-300 max-w-7xl mx-auto ${isScrolled ? "shadow-xl" : "shadow-lg"
+        className={`floating-nav rounded-2xl px-5 sm:px-6 py-3.5 sm:py-3 bg-glass-bg transition-all duration-300 max-w-7xl mx-auto ${isScrolled ? "shadow-xl" : "shadow-lg"
           }`}
       >
         <div className="flex items-center justify-between">
@@ -85,7 +85,7 @@ export const Navbar = () => {
                 />
               </div>
               <span
-                className={`${quentine.className} text-primary-foreground text-xl sm:text-base`}
+                className={`${quentine.className} text-primary-foreground text-lg sm:text-xl truncate`}
               >
                 {selfData.name}
               </span>

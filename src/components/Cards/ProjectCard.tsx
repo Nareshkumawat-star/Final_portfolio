@@ -178,7 +178,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
 
           {/* Action Buttons */}
           <motion.div
-            className="flex space-x-3 mt-auto"
+            className="flex flex-col sm:flex-row gap-3 mt-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: index * 0.1 + 0.6 }}

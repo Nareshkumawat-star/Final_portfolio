@@ -47,11 +47,11 @@ const Marquee: FC<MarqueeProps> = ({ skills, direction }) => {
     direction === "right" ? [0, -marqueeWidth] : [-marqueeWidth, 0];
 
   return (
-    <div className="my-2">
-      <div className="relative overflow-hidden py-2">
+    <div className="my-2 w-full max-w-[100vw]">
+      <div className="relative overflow-hidden py-2 w-full">
         <motion.div
           ref={marqueeRef}
-          className="flex flex-row gap-8 whitespace-nowrap"
+          className="flex flex-row gap-4 sm:gap-8 whitespace-nowrap w-max"
           animate={marqueeWidth > 0 ? { x: animateX } : {}}
           transition={{
             repeat: Infinity,
@@ -65,7 +65,7 @@ const Marquee: FC<MarqueeProps> = ({ skills, direction }) => {
               title={skill.title}
               color={skill.color || "#ffffff"}
               Icon={skill.logoComponent}
-              className="lg:pr-16 md:pr-8 sm:pr-4 pr-2 flex-shrink-0"
+              className="pr-2 sm:pr-4 md:pr-8 lg:pr-16 flex-shrink-0"
             />
           ))}
         </motion.div>

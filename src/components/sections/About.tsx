@@ -27,7 +27,7 @@ export const About = () => {
           <motion.div
             className="flex justify-center md:justify-start"
             initial={{ opacity: 0, x: -60 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.7,
               ease: [0.25, 0.46, 0.45, 0.94],
@@ -75,7 +75,7 @@ export const About = () => {
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: 60 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.7,
               delay: 0.2,
@@ -106,7 +106,7 @@ export const About = () => {
               className="space-y-6 leading-relaxed"
               style={{ color: "hsl(var(--foreground) / 0.8)" }}
               initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               {selfData.about.map((paragraph, index) => (
@@ -114,9 +114,7 @@ export const About = () => {
                   key={index}
                   className="text-xs hover:text-primary-foreground transition-colors duration-200"
                   initial={{ opacity: 0, y: 15 }}
-                  animate={
-                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }
-                  }
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.5,
                     delay: 0.6 + index * 0.1,
@@ -135,7 +133,7 @@ export const About = () => {
             <motion.div
               className="flex items-center gap-4 text-sm"
               initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.6,
                 delay: 0.8,

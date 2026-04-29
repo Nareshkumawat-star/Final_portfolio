@@ -46,7 +46,7 @@ export const Projects = () => {
         <motion.div
           className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {projectsData.map((proj, index) => (
