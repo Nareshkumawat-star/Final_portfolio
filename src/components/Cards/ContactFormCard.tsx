@@ -97,13 +97,13 @@ export const ContactFormCard = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60, scale: 0.9, rotateX: 15 }}
+      initial={{ opacity: 0, y: 40, scale: 0.95 }}
       whileInView={{
         opacity: 1,
         y: 0,
         scale: 1,
-        rotateX: 0,
       }}
+      viewport={{ once: false, margin: "-100px" }}
       transition={{
         duration: 0.8,
         ease: [0.16, 1, 0.3, 1],
@@ -123,7 +123,7 @@ export const ContactFormCard = () => {
           damping: 20,
         },
       }}
-      className="group h-full perspective-1000"
+      className="group h-full perspective-1000 will-change-transform gpu-accelerated"
       style={{
         transformStyle: "preserve-3d",
         perspective: "1000px",
@@ -201,14 +201,16 @@ export const ContactFormCard = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <motion.div
                 initial={{ opacity: 0, x: -40, rotateY: -15 }}
-                whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
                 transition={{
                   duration: 0.7,
-                  delay: 0.3,
+                  delay: 0.2,
                   type: "spring",
                   stiffness: 120,
                   damping: 15,
                 }}
+                className="will-change-transform"
                 whileHover={{ scale: 1.02, rotateY: 2 }}
                 whileFocus={{ scale: 1.02, rotateY: 2 }}
               >
@@ -230,14 +232,16 @@ export const ContactFormCard = () => {
 
               <motion.div
                 initial={{ opacity: 0, x: 40, rotateY: 15 }}
-                whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
                 transition={{
                   duration: 0.7,
-                  delay: 0.4,
+                  delay: 0.3,
                   type: "spring",
                   stiffness: 120,
                   damping: 15,
                 }}
+                className="will-change-transform"
                 whileHover={{ scale: 1.02, rotateY: -2 }}
                 whileFocus={{ scale: 1.02, rotateY: -2 }}
               >
