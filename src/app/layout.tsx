@@ -123,7 +123,7 @@ export const metadata: Metadata = {
 };
 
 
-import { CommandPalette, CustomCursor, ScrollProgress } from "@/components/common";
+import { AIAssistant, CommandPalette, CustomCursor, ScrollProgress } from "@/components/common";
 
 export default function RootLayout({
   children,
@@ -145,6 +145,7 @@ export default function RootLayout({
         <ScrollProgress />
         <CustomCursor />
         <CommandPalette />
+        <AIAssistant />
 
         <script
           type="application/ld+json"
