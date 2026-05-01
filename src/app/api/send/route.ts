@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
   // Notification to Portfolio Owner (Naresh)
   const ownerMessage = {
-    from: `"Portfolio Contact Form" <${process.env.email_from}>`,
+    from: `"Portfolio Contact Form" <${process.env.EMAIL_FROM}>`,
     to: "nareshkmt112006@gmail.com",
     subject: `New Message: ${reasonToContact} from ${senderName}`,
     html: htmlContent,
@@ -47,7 +47,7 @@ export async function POST(request: Request) {
 
   // Confirmation to the Sender
   const senderMessage = {
-    from: `"Naresh Kumawat Portfolio" <${process.env.email_from}>`,
+    from: `"Naresh Kumawat Portfolio" <${process.env.EMAIL_FROM}>`,
     to: senderEmail,
     subject: "Message Received! 🚀 - Naresh Kumawat",
     html: `
@@ -65,8 +65,8 @@ export async function POST(request: Request) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.email_from,
-      pass: process.env.email_password,
+      user: process.env.EMAIL_FROM,
+      pass: process.env.EMAIL_PASSWORD,
     },
   });
 

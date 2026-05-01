@@ -8,7 +8,7 @@ import { nasalization } from "@/app/fonts";
 
 export function Experience() {
   const ref = useRef(null);
-  const isInView = useInView(ref, {
+  useInView(ref, {
     once: false,
     margin: "-80px",
     amount: 0.1,

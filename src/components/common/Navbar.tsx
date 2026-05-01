@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 
 import { RiMenu4Fill, RiCloseLargeFill } from "react-icons/ri";
 
-import { motion, useInView } from "motion/react";
 
 import { quentine } from "@/app/fonts";
 

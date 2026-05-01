@@ -10,7 +10,7 @@ import { projectsData } from "@/constant/";
 
 export const Projects = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {
+  useInView(ref, {
     once: false,
     margin: "-80px",
     amount: 0.1,

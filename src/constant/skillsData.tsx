@@ -31,7 +31,7 @@ import {
   SiVercel,
 } from "react-icons/si";
 
-import { GiBrain, GiLogicGateNxor } from "react-icons/gi";
+import { GiBrain } from "react-icons/gi";
 import { MdApi } from "react-icons/md";
 import { TbBrandCpp } from "react-icons/tb";
 
