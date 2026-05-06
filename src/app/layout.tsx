@@ -123,8 +123,8 @@ export const metadata: Metadata = {
 };
 
 
-import { AIAssistant, CommandPalette, CustomCursor, ScrollProgress } from "@/components/common";
-import TextCursor from "@/components/bits/TextCursor";
+import { AIAssistant, CommandPalette, ScrollProgress } from "@/components/common";
+import SplashCursor from "@/components/bits/SplashCursor";
 
 export default function RootLayout({
   children,
@@ -144,11 +144,17 @@ export default function RootLayout({
 
 
         <ScrollProgress />
-        <CustomCursor />
-        <TextCursor 
-          text="✨"
-          randomFloat={true}
-          maxPoints={8}
+        <SplashCursor
+          DENSITY_DISSIPATION={3.5}
+          VELOCITY_DISSIPATION={2}
+          PRESSURE={0.1}
+          CURL={3}
+          SPLAT_RADIUS={0.2}
+          SPLAT_FORCE={6000}
+          COLOR_UPDATE_SPEED={10}
+          SHADING={true}
+          RAINBOW_MODE={false}
+          COLOR="#A855F7"
         />
         <CommandPalette />
         <AIAssistant />

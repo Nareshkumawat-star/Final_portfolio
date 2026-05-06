@@ -15,7 +15,21 @@ import RotatingText from "../bits/RotatingText";
 
 export const AIAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { messages, input, handleInputChange, handleSubmit, append, setMessages, isLoading } = useChat({});
+  const { messages, setMessages, sendMessage, status } = useChat({});
+  const [input, setInput] = useState("");
+  const isLoading = status === "streaming" || status === "submitted";
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!input.trim() || isLoading) return;
+    sendMessage({ role: "user", parts: [{ type: "text", text: input }] });
+    setInput("");
+  };
+
   const scrollRef = useRef<HTMLDivElement>(null);
   const constraintsRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -112,10 +126,9 @@ export const AIAssistant = () => {
                           key={q}
                           type="button"
                           onClick={() => {
-                            append({
-                              id: String(Date.now()),
+                            sendMessage({
                               role: "user",
-                              content: q,
+                              parts: [{ type: "text", text: q }],
                             });
                           }}
                           className="text-[9px] px-3 py-1.5 rounded bg-zinc-900 border border-zinc-800 hover:bg-primary/20 transition-all text-zinc-400 font-mono cursor-pointer"
